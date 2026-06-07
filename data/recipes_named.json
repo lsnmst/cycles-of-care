@@ -1,0 +1,402 @@
+[
+  {
+    "id": "10",
+    "title": "Assembly of One Plants",
+    "accession": "AM-01P-nerolean-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea        ",
+    "ingredient_count": 1,
+    "dominant_part": "leafs",
+    "dominant_scientific": "nerium oleander"
+  },
+  {
+    "id": "11",
+    "title": "Assembly of One Plants",
+    "accession": "RC-01P-hedhelix-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle",
+    "ingredient_count": 1,
+    "dominant_part": "leafs",
+    "dominant_scientific": "hedera helix"
+  },
+  {
+    "id": "12",
+    "title": "Assembly of Two Plants",
+    "accession": "AM-02P-artabrot-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea        ",
+    "ingredient_count": 2,
+    "dominant_part": "plant (not specified)",
+    "dominant_scientific": "artemisia abrotanum"
+  },
+  {
+    "id": "13",
+    "title": "Assembly of One Plants",
+    "accession": "AM-01P-artabsin-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea        ",
+    "ingredient_count": 1,
+    "dominant_part": "leafs",
+    "dominant_scientific": "artemisia absinthium"
+  },
+  {
+    "id": "14",
+    "title": "Assembly of One Flowers",
+    "accession": "RC-01F-matchamo-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle",
+    "ingredient_count": 1,
+    "dominant_part": "flowers",
+    "dominant_scientific": "matricaria chamomilla"
+  },
+  {
+    "id": "15",
+    "title": "Assembly of Three Flowers",
+    "accession": "DY-03F-matchamo-IT",
+    "country": "Italy",
+    "disease": "Dysmenorrhea",
+    "ingredient_count": 3,
+    "dominant_part": "flowers",
+    "dominant_scientific": "matricaria chamomilla"
+  },
+  {
+    "id": "16",
+    "title": "Assembly of Four Flowers",
+    "accession": "AM-04F-matchamo-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea        ",
+    "ingredient_count": 4,
+    "dominant_part": "flowers",
+    "dominant_scientific": "matricaria chamomilla"
+  },
+  {
+    "id": "17",
+    "title": "Assembly of One Plants",
+    "accession": "MT-01P-petalbus-IT",
+    "country": "Italy",
+    "disease": "Metrorrhagia",
+    "ingredient_count": 1,
+    "dominant_part": "plant (not specified)",
+    "dominant_scientific": "petasites albus gaertn."
+  },
+  {
+    "id": "18",
+    "title": "Assembly of Two Leaves",
+    "accession": "RC-02L-tusfarfa-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle",
+    "ingredient_count": 2,
+    "dominant_part": "leaves",
+    "dominant_scientific": "tussilago farfara"
+  },
+  {
+    "id": "19",
+    "title": "Assembly of One Leaves",
+    "accession": "AM-01L-boroffic-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea        ",
+    "ingredient_count": 1,
+    "dominant_part": "leaves",
+    "dominant_scientific": "borago officinalis"
+  },
+  {
+    "id": "2",
+    "title": "Assembly of One Roots",
+    "accession": "AM-01R-samnigra-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea        ",
+    "ingredient_count": 1,
+    "dominant_part": "roots",
+    "dominant_scientific": "sambucus nigra"
+  },
+  {
+    "id": "20",
+    "title": "Assembly of Two Leaves",
+    "accession": "RC-02L-valoffic-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle",
+    "ingredient_count": 2,
+    "dominant_part": "leaves",
+    "dominant_scientific": "valeriana officinalis"
+  },
+  {
+    "id": "21",
+    "title": "Assembly of One Roots",
+    "accession": "AM-01R-brydioic-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea        ",
+    "ingredient_count": 1,
+    "dominant_part": "roots",
+    "dominant_scientific": "bryonia dioica jacq."
+  },
+  {
+    "id": "22",
+    "title": "Assembly of One Leaves",
+    "accession": "RC-01L-cupsempe-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle",
+    "ingredient_count": 1,
+    "dominant_part": "leaves",
+    "dominant_scientific": "cupressus sempervirens"
+  },
+  {
+    "id": "23",
+    "title": "Assembly of Two Plants",
+    "accession": "RC-02P-junsabin-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle",
+    "ingredient_count": 2,
+    "dominant_part": "plant (not specified)",
+    "dominant_scientific": "juniperus sabina"
+  },
+  {
+    "id": "24",
+    "title": "Assembly of One Plants",
+    "accession": "ND-01P-acaseneg-IT",
+    "country": "Italy",
+    "disease": "Metrorrhagia; Menorrhagia",
+    "ingredient_count": 1,
+    "dominant_part": "rubber",
+    "dominant_scientific": "acacia senegal willd."
+  },
+  {
+    "id": "25",
+    "title": "Assembly of One Seeds",
+    "accession": "RC-01S-phavulga-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle",
+    "ingredient_count": 1,
+    "dominant_part": "seeds",
+    "dominant_scientific": "phaseolus vulgaris"
+  },
+  {
+    "id": "26",
+    "title": "Assembly of One Leaves",
+    "accession": "ND-01L-hypperfo-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle; Dysmenorrhea;       ",
+    "ingredient_count": 1,
+    "dominant_part": "leaves",
+    "dominant_scientific": "hypericum perforatum"
+  },
+  {
+    "id": "27",
+    "title": "Assembly of One Leaves",
+    "accession": "ND-01L-jugregia-IT",
+    "country": "Italy",
+    "disease": "Menorrhagia;",
+    "ingredient_count": 1,
+    "dominant_part": "leaves",
+    "dominant_scientific": "juglans regia"
+  },
+  {
+    "id": "28",
+    "title": "Assembly of One Plants",
+    "accession": "ND-01P-lavangus-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle; ",
+    "ingredient_count": 1,
+    "dominant_part": "plant (not specified)",
+    "dominant_scientific": "lavandula angustifolia mill."
+  },
+  {
+    "id": "29",
+    "title": "Assembly of One Leaves",
+    "accession": "ND-01L-marvulga-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle; ",
+    "ingredient_count": 1,
+    "dominant_part": "leaves",
+    "dominant_scientific": "marrubium vulgare"
+  },
+  {
+    "id": "3",
+    "title": "Assembly of One Leaves",
+    "accession": "ME-01L-apigrave-IT",
+    "country": "Italy",
+    "disease": "Menorrhagia",
+    "ingredient_count": 1,
+    "dominant_part": "leaves",
+    "dominant_scientific": "apium graveolens"
+  },
+  {
+    "id": "30",
+    "title": "Assembly of One Plants",
+    "accession": "AM-01P-orivulga-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea        ",
+    "ingredient_count": 1,
+    "dominant_part": "plant (not specified)",
+    "dominant_scientific": "origanum vulgare"
+  },
+  {
+    "id": "31",
+    "title": "Assembly of One Flowers",
+    "accession": "AM-01F-vitagnus-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea        ",
+    "ingredient_count": 1,
+    "dominant_part": "flowers",
+    "dominant_scientific": "vitex agnus-castus"
+  },
+  {
+    "id": "32",
+    "title": "Assembly of One Leaves",
+    "accession": "ND-01L-malsylve-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea; To regulate menstrual cycle;         ",
+    "ingredient_count": 1,
+    "dominant_part": "leaves",
+    "dominant_scientific": "malva sylvestris"
+  },
+  {
+    "id": "33",
+    "title": "Assembly of One Roots",
+    "accession": "ND-01R-arudonax-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea; To regulate menstrual cycle;         ",
+    "ingredient_count": 1,
+    "dominant_part": "roots",
+    "dominant_scientific": "arundo donax"
+  },
+  {
+    "id": "34",
+    "title": "Assembly of One Leaves",
+    "accession": "AM-01L-cyndacty-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea        ",
+    "ingredient_count": 1,
+    "dominant_part": "leaves",
+    "dominant_scientific": "cynodon dactylon"
+  },
+  {
+    "id": "35",
+    "title": "Assembly of One Plants",
+    "accession": "DY-01P-adicapil-IT",
+    "country": "Italy",
+    "disease": "Dysmenorrhea",
+    "ingredient_count": 1,
+    "dominant_part": "plant (aerial part)",
+    "dominant_scientific": "adiantum capillus-veneris"
+  },
+  {
+    "id": "36",
+    "title": "Assembly of One Leaves",
+    "accession": "ND-01L-dicalbus-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea; Dysmenorrhea;        ",
+    "ingredient_count": 1,
+    "dominant_part": "leaves",
+    "dominant_scientific": "dictamnus albus"
+  },
+  {
+    "id": "37",
+    "title": "Assembly of One Leaves",
+    "accession": "AM-01L-rutgrave-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea        ",
+    "ingredient_count": 1,
+    "dominant_part": "leaves",
+    "dominant_scientific": "ruta graveolens"
+  },
+  {
+    "id": "38",
+    "title": "Assembly of One Leaves",
+    "accession": "SF-01L-solnigru-IT",
+    "country": "Italy",
+    "disease": "Stop menstrual flux",
+    "ingredient_count": 1,
+    "dominant_part": "leaves",
+    "dominant_scientific": "solanum nigrum"
+  },
+  {
+    "id": "39",
+    "title": "Assembly of One Leaves",
+    "accession": "ND-01L-urtdioic-IT",
+    "country": "Italy",
+    "disease": "Metrorrhagia; Menorrhagia;",
+    "ingredient_count": 1,
+    "dominant_part": "leaves",
+    "dominant_scientific": "urtica dioica"
+  },
+  {
+    "id": "4",
+    "title": "Assembly of One Plants",
+    "accession": "AM-01P-petcrisp-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea        ",
+    "ingredient_count": 1,
+    "dominant_part": "plant",
+    "dominant_scientific": "petroselinum crispum (mill.)"
+  },
+  {
+    "id": "40",
+    "title": "Assembly of One Plants",
+    "accession": "ND-01B-acecampe-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle; Dysmenorrhea;       ",
+    "ingredient_count": 1,
+    "dominant_part": "bark",
+    "dominant_scientific": "acer campestre"
+  },
+  {
+    "id": "5",
+    "title": "Assembly of Seven Plants",
+    "accession": "RC-07P-apigrave-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle",
+    "ingredient_count": 7,
+    "dominant_part": "plant (not specified)",
+    "dominant_scientific": "apium graveolens"
+  },
+  {
+    "id": "6",
+    "title": "Assembly of Four Leaves",
+    "accession": "RC-04L-petcrisp-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle",
+    "ingredient_count": 4,
+    "dominant_part": "leaves",
+    "dominant_scientific": "petroselinum crispum (mill.)"
+  },
+  {
+    "id": "7",
+    "title": "Assembly of One Plants",
+    "accession": "MT-01P-petcrisp-IT",
+    "country": "Italy",
+    "disease": "Metrorrhagia",
+    "ingredient_count": 1,
+    "dominant_part": "plant",
+    "dominant_scientific": "petroselinum crispum (mill.)"
+  },
+  {
+    "id": "8",
+    "title": "Assembly of One Seeds",
+    "accession": "AM-01S-pimanisu-IT",
+    "country": "Italy",
+    "disease": "Amenorrhea        ",
+    "ingredient_count": 1,
+    "dominant_part": "seeds",
+    "dominant_scientific": "pimpinella anisum"
+  },
+  {
+    "id": "9",
+    "title": "Assembly of One Seeds",
+    "accession": "RC-01S-pimanisu-IT",
+    "country": "Italy",
+    "disease": "To regulate menstrual cycle",
+    "ingredient_count": 1,
+    "dominant_part": "seeds",
+    "dominant_scientific": "pimpinella anisum"
+  },
+  {
+    "id": "IT-DY-07F-achmille",
+    "title": "Assembly of Seven Flowers",
+    "accession": "DY-07F-achmille-IT",
+    "country": "Italy",
+    "disease": "Dysmenorrhea",
+    "ingredient_count": 7,
+    "dominant_part": "flowers",
+    "dominant_scientific": "achillea millefolium"
+  }
+]
