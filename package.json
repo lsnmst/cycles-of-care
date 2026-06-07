@@ -1,0 +1,25 @@
+{
+  "homepage": "https://lsnmst.github.io/cycles-of-care",
+  "name": "cycles-of-care",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "gh-pages": "^6.3.0",
+    "svelte": "^5.2.7",
+    "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "h3-js": "^4.4.0",
+    "leaflet": "^1.9.4",
+    "papaparse": "^5.5.3"
+  }
+}

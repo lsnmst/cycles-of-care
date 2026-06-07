@@ -1,0 +1,98 @@
+/* ─── Reset ─────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Tokens ─────────────────────────────────────────────── */
+:root {
+  --ink: #1c1a16;
+  --ink-muted: #6b6559;
+  --ink-faint: #b5afa4;
+  --paper: #f5e8f0;
+  --paper-warm: #ede6d6;
+  --paper-dark: #e0d8c8;
+  --rose: #a84a4a;
+  --rose-pale: #e8c4c4;
+  --moss: #4a6a4a;
+  --moss-pale: #c4d8c4;
+  --serif: "Source Serif 4", Georgia, serif;
+  --mono: "Space Grotesk", monospace;
+  --gap: 1.5rem;
+  --radius: 2px;
+}
+
+/* ─── Base ───────────────────────────────────────────────── */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--mono);
+  font-weight: 600;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--rose);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rose);
+  border-radius: 2px;
+}
+
+/* ─── Leaflet overrides ──────────────────────────────────── */
+.leaflet-container {
+  background: var(--rose-pale) !important;
+  font-family: var(--mono) !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: var(--radius);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  box-shadow: 2px 2px 0 var(--ink-faint);
+}
+
+.leaflet-control-zoom a {
+  font-family: var(--mono) !important;
+}
