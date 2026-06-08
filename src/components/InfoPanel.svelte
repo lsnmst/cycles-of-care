@@ -31,7 +31,10 @@
                 <br />What you find here is not medical advice. It is an
                 invitation to reconnect body to plant, plant to territory,
                 territory to the communities that still carry this knowledge
-                forward.
+                forward.<br /><br />
+
+                To contribute or get in touch, 
+                <a style="color: var(--paper);" href="https://www.instagram.com/alessandromusetta/" target="_blank" rel="noopener">DM ⸙͎۪۫</a>
             </p>
             <div class="method">
                 <br />DATA<br />
@@ -99,7 +102,7 @@
                 />
                 Motti, R., Bonanomi, G., Emrick, S. et al. Traditional Herbal Remedies
                 Used in women’s Health Care in Italy: a Review. Hum Ecol 47, 941–972
-                (2019). https://doi.org/10.1007/s10745-019-00125-4<br />
+                (2019).<br />
             </div>
         </div>
     </aside>

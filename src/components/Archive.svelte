@@ -73,6 +73,8 @@
     <span class="count">{$filteredRecipes.length} recipes</span>
   </div>
 
+  <span class="count-mobile">{$filteredRecipes.length} recipes</span>
+
   <!-- Legend -->
   <div class="legend">
     {#each Object.entries(typeSymbols) as [type, sym]}
@@ -187,6 +189,10 @@
     font-size: 0.7rem;
     color: var(--ink);
     margin-left: auto;
+  }
+
+  .count-mobile {
+    display: none;
   }
 
   .card-ingredients .hover {
@@ -320,19 +326,20 @@
       display: none;
     }
 
+    .count-mobile {
+      display: inline;
+    }
+
     .filter-bar {
       flex-direction: column;
       gap: 0.25rem;
+      display: none;
     }
 
     .filter-label {
       font-size: 0.65rem;
-    }
-
-    .filter-label select {
-      font-size: 0.65rem;
-      text-align: center;
-      text-align: -webkit-center;
+      text-align: center !important;
+      text-align: -webkit-center !important;
     }
   }
 </style>

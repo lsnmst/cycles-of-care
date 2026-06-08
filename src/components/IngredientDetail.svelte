@@ -1,105 +1,122 @@
 <script>
-  import { activeIngredient, activeIngredientName } from '../stores/data.js'
-  import MapView from './MapView.svelte'
+  import { onMount } from "svelte";
+  import { activeIngredient, activeIngredientName } from "../stores/data.js";
+  import MapView from "./MapView.svelte";
 
-  $: ing = $activeIngredient
-  $: name = $activeIngredientName
+  $: ing = $activeIngredient;
+  $: name = $activeIngredientName;
+
+  $: if (ing) {
+    queueMicrotask(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    });
+  }
 
   // botanical image: first try local pre-fetched, fall back to GBIF thumbnail
   $: localImg = ing?.GBIF_id
     ? `${import.meta.env.BASE_URL}img/botanica/${ing.GBIF_id}.jpg`
-    : null
+    : null;
 
-  $: gbifPageUrl = ing?.GBIF ? ing.GBIF : null
+  $: gbifPageUrl = ing?.GBIF ? ing.GBIF : null;
 
-  let imgError = false
-  $: if (ing) imgError = false   // reset on new ingredient
+  let imgError = false;
+  $: if (ing) imgError = false; // reset on new ingredient
 </script>
 
 {#if ing}
-<div class="ingredient-detail">
-  <!-- Left: botanical card -->
-  <div class="panel card-panel">
-    <div class="botanical-img-wrap">
-      {#if localImg && !imgError}
-        <img
-          src={localImg}
-          alt="botanical illustration of {ing.scientific_name}"
-          on:error={() => imgError = true}
-        />
-      {:else}
-        <div class="img-placeholder">
-          <span>○</span>
-          <p>illustration not yet available</p>
-          {#if gbifPageUrl}
-            <a href={gbifPageUrl} target="_blank" rel="noopener">view on GBIF ↗</a>
-          {/if}
-        </div>
-      {/if}
-    </div>
-
-    <div class="card-info">
-      <h2>{ing.vernacular_name || name}</h2>
-      <em class="scientific">{ing.scientific_name || name}</em>
-
-      {#if ing.used_parts}
-        <div class="field">
-          <span class="field-label">parts used</span>
-          <span>{ing.used_parts}</span>
-        </div>
-      {/if}
-
-      {#if ing.harvest}
-        <div class="field">
-          <span class="field-label">harvest</span>
-          <p>{ing.harvest}</p>
-        </div>
-      {/if}
-
-      {#if ing.preservation}
-        <div class="field">
-          <span class="field-label">preservation</span>
-          <p>{ing.preservation}</p>
-        </div>
-      {/if}
-
-      {#if ing.desease}
-        <div class="field">
-          <span class="field-label">used for</span>
-          <div class="tags">
-            {#each (ing.desease || '').split(';').map(d => d.trim()).filter(Boolean) as d}
-              <span class="tag">{d}</span>
-            {/each}
+  <div class="ingredient-detail">
+    <!-- Left: botanical card -->
+    <div class="panel card-panel">
+      <div class="botanical-img-wrap">
+        {#if localImg && !imgError}
+          <img
+            src={localImg}
+            alt="botanical illustration of {ing.scientific_name}"
+            on:error={() => (imgError = true)}
+          />
+        {:else}
+          <div class="img-placeholder">
+            <span>○</span>
+            <p>illustration not yet available</p>
+            {#if gbifPageUrl}
+              <a href={gbifPageUrl} target="_blank" rel="noopener"
+                >view on GBIF ↗</a
+              >
+            {/if}
           </div>
-        </div>
-      {/if}
+        {/if}
+      </div>
 
-      {#if gbifPageUrl}
-        <a class="gbif-link" href={gbifPageUrl} target="_blank" rel="noopener">
-          GBIF species page ↗
-        </a>
-      {/if}
+      <div class="card-info">
+        <h2>{ing.vernacular_name || name}</h2>
+        <em class="scientific">{ing.scientific_name || name}</em>
+
+        {#if ing.used_parts}
+          <div class="field">
+            <span class="field-label">parts used</span>
+            <span>{ing.used_parts}</span>
+          </div>
+        {/if}
+
+        {#if ing.harvest}
+          <div class="field">
+            <span class="field-label">harvest</span>
+            <p>{ing.harvest}</p>
+          </div>
+        {/if}
+
+        {#if ing.preservation}
+          <div class="field">
+            <span class="field-label">preservation</span>
+            <p>{ing.preservation}</p>
+          </div>
+        {/if}
+
+        {#if ing.desease}
+          <div class="field">
+            <span class="field-label">used for</span>
+            <div class="tags">
+              {#each (ing.desease || "")
+                .split(";")
+                .map((d) => d.trim())
+                .filter(Boolean) as d}
+                <span class="tag">{d}</span>
+              {/each}
+            </div>
+          </div>
+        {/if}
+
+        {#if gbifPageUrl}
+          <a
+            class="gbif-link"
+            href={gbifPageUrl}
+            target="_blank"
+            rel="noopener"
+          >
+            GBIF species page ↗
+          </a>
+        {/if}
+      </div>
+    </div>
+
+    <!-- Right: map -->
+    <div class="panel map-panel">
+      <div class="map-label">
+        <span class="dot"></span>
+        distribution of <em>{ing.scientific_name || name}</em>
+      </div>
+      <MapView
+        mode="ingredient"
+        gbifIds={ing.GBIF_id ? [ing.GBIF_id] : []}
+        ingredientNames={[ing.scientific_name || name]}
+      />
+      <div class="map-legend">
+        <span><span class="swatch single"></span> species distribution</span>
+      </div>
     </div>
   </div>
-
-  <!-- Right: map -->
-  <div class="panel map-panel">
-    <div class="map-label">
-      <span class="dot"></span>
-      distribution of <em>{ing.scientific_name || name}</em>
-    </div>
-    <MapView
-      mode="ingredient"
-      gbifIds={ing.GBIF_id ? [ing.GBIF_id] : []}
-      ingredientNames={[ing.scientific_name || name]}
-    />
-    <div class="map-legend">
-      <span><span class="swatch single"></span> species distribution</span>
-    </div>
-  </div>
-</div>
 {:else}
-<p class="missing">ingredient data not found for <em>{name}</em></p>
+  <p class="missing">ingredient data not found for <em>{name}</em></p>
 {/if}
 
 <style>
@@ -113,10 +130,14 @@
   }
 
   @media (max-width: 900px) {
-    .ingredient-detail { grid-template-columns: 1fr; }
+    .ingredient-detail {
+      grid-template-columns: 1fr;
+    }
   }
 
-  .panel { overflow-y: auto; }
+  .panel {
+    overflow-y: auto;
+  }
 
   .card-panel {
     border-right: 0px solid var(--paper-dark);
@@ -160,7 +181,9 @@
     font-family: var(--mono);
     font-size: 0.75rem;
   }
-  .img-placeholder span { font-size: 2rem; }
+  .img-placeholder span {
+    font-size: 2rem;
+  }
   .img-placeholder a {
     font-size: 0.68rem;
     color: var(--rose-pale);
@@ -176,7 +199,9 @@
     overflow-y: auto;
   }
 
-  h2 { font-size: 1.5rem; }
+  h2 {
+    font-size: 1.5rem;
+  }
 
   .scientific {
     font-family: var(--serif);
@@ -186,7 +211,11 @@
     margin-top: -0.5rem;
   }
 
-  .field { display: flex; flex-direction: column; gap: 0.2rem; }
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
 
   .field-label {
     font-family: var(--mono);
@@ -196,14 +225,19 @@
     text-transform: uppercase;
   }
 
-  .field span:not(.field-label), .field p {
+  .field span:not(.field-label),
+  .field p {
     font-family: var(--mono);
     font-size: 0.78rem;
     color: var(--ink-muted);
     line-height: 1.55;
   }
 
-  .tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
 
   .tag {
     font-family: var(--mono);
@@ -235,7 +269,8 @@
   }
 
   .dot {
-    width: 8px; height: 8px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: #8099b0;
     display: inline-block;
@@ -254,12 +289,16 @@
 
   .swatch {
     display: inline-block;
-    width: 10px; height: 10px;
+    width: 10px;
+    height: 10px;
     border-radius: 1px;
     margin-right: 0.3rem;
     vertical-align: middle;
   }
-  .swatch.single { background: #8099b0; opacity: 0.5; }
+  .swatch.single {
+    background: #8099b0;
+    opacity: 0.5;
+  }
 
   .missing {
     font-family: var(--mono);

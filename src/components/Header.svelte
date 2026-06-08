@@ -130,4 +130,13 @@
   .breadcrumb .sep {
     cursor: default;
   }
+
+  @media (max-width: 600px) {
+    .title-block {
+      text-align: center;
+    }
+    .title-block h1 {
+      font-size: 2.6rem;
+    }
+  }
 </style>

@@ -1,8 +1,13 @@
 <script>
+  import { onMount } from "svelte";
   import { activeRecipe, openIngredient } from "../stores/data.js";
   import MapView from "./MapView.svelte";
 
   $: recipe = $activeRecipe;
+
+  onMount(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  });
 </script>
 
 {#if recipe}
