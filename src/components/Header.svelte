@@ -7,10 +7,28 @@
   } from "../stores/data.js";
 
   $: showBack = $activeView !== "archive";
+
+  function goHome() {
+    activeView.set("archive");
+    activeRecipeId.set(null);
+    activeIngredientName.set(null);
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
+  }
 </script>
 
 <header>
-  <div class="title-block">
+  <div
+    class="title-block"
+    role="button"
+    tabindex="0"
+    on:click={goHome}
+    on:keydown={(e) => e.key === "Enter" && goHome()}
+  >
     <h1>Cycles of Care</h1>
     <p class="subtitle">a menstrual rematriation archive</p>
   </div>
@@ -71,6 +89,11 @@
   .title-block {
     flex: 1;
     min-width: 200px;
+    cursor: pointer;
+  }
+
+  .title-block:hover h1 {
+    opacity: 0.85;
   }
 
   h1 {

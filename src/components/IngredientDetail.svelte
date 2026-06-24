@@ -96,6 +96,80 @@
             GBIF species page ↗
           </a>
         {/if}
+
+        {#if ing.theferns}
+          <div class="ferns-box">
+            <div class="ferns-header">
+              Additional ecological, cultivation and ethnobotanical information
+            </div>
+
+            <a
+              class="ferns-link"
+              href={ing.theferns}
+              target="_blank"
+              rel="noopener"
+            >
+              source: Temperate Plants Database, Ken Fern. temperate.theferns.info ↗
+            </a>
+
+            <!--             
+            {#if ing.habit}
+              <div class="ferns-field">
+                <span>habit</span>
+                <p>{ing.habit}</p>
+              </div>
+            {/if} -->
+
+            {#if ing.habitat}
+              <div class="ferns-field">
+                <span>habitat</span>
+                <p>{ing.habitat}</p>
+              </div>
+            {/if}
+
+            {#if ing.cultivation}
+              <div class="ferns-field">
+                <span>cultivation</span>
+                <p>{ing.cultivation}</p>
+              </div>
+            {/if}
+
+            {#if ing.edible}
+              <div class="ferns-field">
+                <span>edible uses</span>
+                <p>{ing.edible}</p>
+              </div>
+            {/if}
+
+            {#if ing.agroforestry}
+              <div class="ferns-field">
+                <span>agroforestry</span>
+                <p>{ing.agroforestry}</p>
+              </div>
+            {/if}
+
+            {#if ing.others}
+              <div class="ferns-field">
+                <span>other uses</span>
+                <p>{ing.others}</p>
+              </div>
+            {/if}
+
+            {#if ing.propagation}
+              <div class="ferns-field">
+                <span>propagation</span>
+                <p>{ing.propagation}</p>
+              </div>
+            {/if}
+
+            {#if ing.hazards}
+              <div class="ferns-field warning">
+                <span>hazards</span>
+                <p>{ing.hazards}</p>
+              </div>
+            {/if}
+          </div>
+        {/if}
       </div>
     </div>
 
@@ -155,7 +229,7 @@
   /* ── Botanical image ─── */
   .botanical-img-wrap {
     width: 100%;
-    aspect-ratio: 3/4;
+    aspect-ratio: 2/6;
     max-height: 320px;
     overflow: hidden;
     background: var(--rose);
@@ -306,5 +380,74 @@
     color: var(--ink-faint);
     padding: 3rem 0;
     text-align: center;
+  }
+
+  .ferns-box {
+    margin-top: 1rem;
+    padding: 1rem;
+
+    border: 1px dashed var(--paper-dark);
+
+    background: var(--rose);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .ferns-header {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+
+    color: var(--paper-warm);
+  }
+
+  .ferns-link {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+
+    color: var(--paper-warm);
+    text-decoration: underline;
+  }
+
+  .ferns-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .ferns-field span {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    color: var(--ink-faint);
+  }
+
+  .ferns-field p {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+
+    line-height: 1.55;
+    color: var(--paper-warm);
+
+    margin: 0;
+  }
+
+  .ferns-field.warning {
+    border-top: 1px solid var(--paper-dark);
+    padding-top: 0.8rem;
+  }
+
+  .ferns-field.warning span {
+    color: var(--mono);
+  }
+
+  .ferns-field.warning p {
+    color: var(--paper-dark);
   }
 </style>
